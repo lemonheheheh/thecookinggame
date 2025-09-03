@@ -6,7 +6,8 @@ public class ClickPickup : MonoBehaviour
     public GameObject mushroomLayer; // assign this in Inspector
 
     private GameObject heldItem;
-    public float holdHeight = 0.5f; // height above pizza
+    public float holdDistance = 5f;   // distance from camera while dragging
+    public float dropHeight = 0.5f;   // height above pizza when dropped
 
     void Update()
     {
@@ -27,11 +28,11 @@ public class ClickPickup : MonoBehaviour
             }
             else
             {
-                // Drop ingredient
+                // Drop ingredient on pizza
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out RaycastHit hit))
                 {
-                    // Show mushroom layer on pizza
+                    // Show mushroom layer
                     if (mushroomLayer != null)
                         mushroomLayer.SetActive(true);
 
@@ -45,13 +46,11 @@ public class ClickPickup : MonoBehaviour
         // Follow mouse while holding
         if (heldItem != null)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit))
-            {
-                Vector3 followPos = hit.point;
-                followPos.y = holdHeight; // lock height above pizza
-                heldItem.transform.position = followPos;
-            }
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = holdDistance; // lock to a fixed distance
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+            heldItem.transform.position = worldPos;
         }
     }
 }
