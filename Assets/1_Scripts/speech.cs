@@ -1,9 +1,12 @@
 using System;
 using UnityEngine;
 using TMPro;
+using System.Collections;
+
 
 public class Speech : MonoBehaviour
 {
+    private IEnumerator coroutine;
     private TextMeshPro textMeshPro;
 
     private void Awake()
@@ -20,9 +23,18 @@ public class Speech : MonoBehaviour
         }
     }
 
-    void Start()
-    {
+    void Start(){
         Setup("meow");
+        coroutine = WaitAndPrint(3.0f);
+        StartCoroutine(coroutine);
+
+
+    }
+    
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Setup("");
     }
 
     void Setup(string text)

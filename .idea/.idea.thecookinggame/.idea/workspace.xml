@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f4e954d-c4b2-4c43-9ae6-68616c200a10" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.thecookinggame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.thecookinggame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1_Scripts/timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1_Scripts/timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1_Scripts/speech.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1_Scripts/speech.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scen1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scen1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +38,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/1_Scripts.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1_Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1_Scripts/speech.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/riann/RiderProjects/thecookinggame/Assets/scen1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scen1.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -132,7 +134,7 @@
       <workItem from="1756892933120" duration="469000" />
       <workItem from="1756893479249" duration="400000" />
       <workItem from="1756893896541" duration="4091000" />
-      <workItem from="1756975584123" duration="5778000" />
+      <workItem from="1756975584123" duration="8604000" />
     </task>
     <task id="LOCAL-00001" summary="adds script to move side to side">
       <option name="closed" value="true" />
@@ -150,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756893931938</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="goodies">
+      <option name="closed" value="true" />
+      <created>1756983121255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756983121255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +185,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="3-timelimit" />
+                        <option value="2-side-movement" />
                       </list>
                     </value>
                   </entry>
@@ -191,7 +201,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="adds script to move side to side" />
     <MESSAGE value="adds encoding" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds encoding" />
+    <MESSAGE value="goodies" />
+    <option name="LAST_COMMIT_MESSAGE" value="goodies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
