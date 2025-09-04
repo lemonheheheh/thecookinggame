@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f4e954d-c4b2-4c43-9ae6-68616c200a10" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.thecookinggame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.thecookinggame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ClickPickup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ClickPickup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/movement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/movement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1_Scripts/timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1_Scripts/timer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scen1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scen1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,21 +22,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "schnickle"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;schnickle&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/lemonheheheh/thecookinggame.git",
-    "accountId": "4e146460-c516-4332-becd-e71fe4b8b471"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lemonheheheh/thecookinggame.git&quot;,
+    &quot;accountId&quot;: &quot;4e146460-c516-4332-becd-e71fe4b8b471&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/1_Scripts.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1_Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1_Scripts/speech.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scen1.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -56,12 +54,13 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "3-timelimit",
+    "git-widget-placeholder": "4-speechbubbles",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -133,6 +132,7 @@
       <workItem from="1756892933120" duration="469000" />
       <workItem from="1756893479249" duration="400000" />
       <workItem from="1756893896541" duration="4091000" />
+      <workItem from="1756975584123" duration="5778000" />
     </task>
     <task id="LOCAL-00001" summary="adds script to move side to side">
       <option name="closed" value="true" />

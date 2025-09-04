@@ -12,9 +12,9 @@ public class timer : MonoBehaviour
     void Start()
     {
 
-    stopTimer = false;
-    sliderGuy.maxValue = gameTime;
-    sliderGuy.value = gameTime;
+        stopTimer = false;
+        sliderGuy.maxValue = gameTime;
+        sliderGuy.value = gameTime;
     }
 
     // Update is called once per frame
