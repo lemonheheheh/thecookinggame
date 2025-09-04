@@ -2,55 +2,45 @@ using UnityEngine;
 
 public class ClickPickup : MonoBehaviour
 {
-    [Header("Pizza Layers")]
-    public GameObject mushroomLayer; // assign this in Inspector
-
     private GameObject heldItem;
-    public float holdDistance = 5f;   // distance from camera while dragging
-    public float dropHeight = 0.5f;   // height above pizza when dropped
+    public float holdHeight = 0.5f; // height above pizza while dragging
 
     void Update()
     {
-        // Pick up / drop logic
+        // Pick up / drop ingredient
         if (Input.GetMouseButtonDown(0))
         {
             if (heldItem == null)
             {
-                // Pick up ingredient
+                // Cast a ray from camera through mouse
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out RaycastHit hit))
+                if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
                 {
-                    if (hit.collider.CompareTag("Ingredient") && hit.collider.name == "Mushroom")
+                    if (hit.collider.CompareTag("Ingredient"))
                     {
                         heldItem = hit.collider.gameObject;
+                        Debug.Log("Picked up: " + heldItem.name);
                     }
                 }
             }
             else
             {
-                // Drop ingredient on pizza
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out RaycastHit hit))
-                {
-                    // Show mushroom layer
-                    if (mushroomLayer != null)
-                        mushroomLayer.SetActive(true);
-
-                    // Remove dragged object
-                    Destroy(heldItem);
-                    heldItem = null;
-                }
+                // Release ingredient (do NOT destroy it here)
+                heldItem = null;
             }
         }
 
-        // Follow mouse while holding
+        // Move held ingredient with mouse
         if (heldItem != null)
         {
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = holdDistance; // lock to a fixed distance
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            heldItem.transform.position = worldPos;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Plane plane = new Plane(Vector3.up, Vector3.zero); // horizontal plane at y=0
+            if (plane.Raycast(ray, out float distance))
+            {
+                Vector3 worldPos = ray.GetPoint(distance);
+                worldPos.y = holdHeight; // lock above pizza
+                heldItem.transform.position = worldPos;
+            }
         }
     }
 }
