@@ -8,7 +8,6 @@ public class PizzaArea : MonoBehaviour
 
     [Header("Ingredient Layers")]
     public List<GameObject> ingredientLayers; // assign objects like OliveLayer, MushroomLayer
-
     private HashSet<string> placedIngredients = new HashSet<string>();
     private Dictionary<string, GameObject> layerMap = new Dictionary<string, GameObject>();
 
@@ -27,32 +26,27 @@ public class PizzaArea : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Ingredient")) return;
 
         string ingName = other.gameObject.name;
 
-        if (requiredIngredients.Contains(ingName) && !placedIngredients.Contains(ingName))
-        {
-            placedIngredients.Add(ingName);
+        if (!requiredIngredients.Contains(ingName) || placedIngredients.Contains(ingName)) return;
+        placedIngredients.Add(ingName);
 
-            // Activate corresponding pizza layer
-            if (layerMap.ContainsKey(ingName))
-                layerMap[ingName].SetActive(true);
-            else
-                Debug.LogWarning("No layer found for ingredient: " + ingName);
+        // Activate corresponding pizza layer
+        if (layerMap.ContainsKey(ingName))
+            layerMap[ingName].SetActive(true);
+        else
+            Debug.LogWarning("No layer found for ingredient: " + ingName);
 
-            Destroy(other.gameObject); // remove ingredient
-            CheckIfComplete();
-        }
+        Destroy(other.gameObject); // remove ingredient
+        CheckIfComplete();
     }
 
-    void CheckIfComplete()
+    private void CheckIfComplete()
     {
-        if (placedIngredients.Count == requiredIngredients.Count)
-        {
-            Debug.Log("🍕 Pizza is ready! WELL DONE!");
-        }
+        if (placedIngredients.Count == requiredIngredients.Count) Debug.Log("🍕 Pizza is ready! WELL DONE!");
     }
 }

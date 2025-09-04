@@ -1,9 +1,21 @@
+using System;
+using _1_Scripts;
 using UnityEngine;
 
 public class ClickPickup : MonoBehaviour
 {
     private GameObject heldItem;
     public float holdHeight = 0.5f; // height above pizza while dragging
+
+    private void Awake()
+    {
+        TimerEvents.TimerEnds += ReleaseItem;
+    }
+
+    private void OnDisable()
+    {
+        TimerEvents.TimerEnds -= ReleaseItem;
+    }
 
     void Update()
     {
@@ -42,5 +54,11 @@ public class ClickPickup : MonoBehaviour
                 heldItem.transform.position = worldPos;
             }
         }
+    }
+
+    private void ReleaseItem()
+    {
+        Debug.Log("ReleaseItem");
+        heldItem = null;
     }
 }
