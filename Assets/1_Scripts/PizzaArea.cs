@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using _1_Scripts;
 
 public class PizzaArea : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PizzaArea : MonoBehaviour
 
     void Start()
     {
+        TimerEvents.OnTimerStart();
         // Map ingredient names to layers
         for (int i = 0; i < requiredIngredients.Count; i++)
         {
@@ -34,6 +36,7 @@ public class PizzaArea : MonoBehaviour
 
         if (!requiredIngredients.Contains(ingName) || placedIngredients.Contains(ingName)) return;
         placedIngredients.Add(ingName);
+        TimerEvents.OnTimerStart();
 
         // Activate corresponding pizza layer
         if (layerMap.ContainsKey(ingName))
