@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f4e954d-c4b2-4c43-9ae6-68616c200a10" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.thecookinggame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.thecookinggame/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6f4e954d-c4b2-4c43-9ae6-68616c200a10" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +133,7 @@
       <workItem from="1756893479249" duration="400000" />
       <workItem from="1756893896541" duration="4091000" />
       <workItem from="1756975584123" duration="8604000" />
-      <workItem from="1757064304070" duration="1127000" />
+      <workItem from="1757064304070" duration="1430000" />
     </task>
     <task id="LOCAL-00001" summary="adds script to move side to side">
       <option name="closed" value="true" />
@@ -169,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757001025779</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mau">
+      <option name="closed" value="true" />
+      <created>1757065707438</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757065707438</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +218,8 @@
     <MESSAGE value="adds encoding" />
     <MESSAGE value="goodies" />
     <MESSAGE value="feet" />
-    <option name="LAST_COMMIT_MESSAGE" value="feet" />
+    <MESSAGE value="mau" />
+    <option name="LAST_COMMIT_MESSAGE" value="mau" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
